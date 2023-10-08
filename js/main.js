@@ -174,7 +174,7 @@ const swiper4 = new Swiper('.vip__swiper', {
   pagination: {
     el: '.vip__swiper--pagination',
     clickable: true,
-      type:'fraction',
+    type: 'fraction', // Используем тип "fraction" для пагинации
   },
 
   // Navigation arrows
@@ -183,6 +183,7 @@ const swiper4 = new Swiper('.vip__swiper', {
     prevEl: '.vip__swiper--btnprev',
   },
 });
+
 const swiper5 = new Swiper('.swiper__extra', {
   // Optional parameters
   direction: 'horizontal',
