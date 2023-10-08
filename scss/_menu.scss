@@ -1,0 +1,225 @@
+   .menu {
+       display: none;
+       margin-bottom: -1200px;
+       height: 1080px;
+
+
+       .menu__swiper {
+           z-index: 60;
+           max-width: 1365px;
+           height: 880px;
+
+
+           .menu__swiper--wrapper {
+               align-items: center;
+
+
+
+               .menu__swiper--slide {
+                   color: #FFF;
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: center;
+                   align-items: center;
+                   height: 200px;
+                   text-align: center;
+                   font-family: Open Sans;
+                   font-size: 30px;
+                   font-style: normal;
+                   font-weight: 300;
+                   line-height: normal;
+                   text-transform: uppercase;
+                   position: relative;
+
+                   .menu__button {
+                       display: none;
+                       background: none;
+                       border: none;
+
+                   }
+
+                   &::before {
+                       content: '';
+                       position: absolute;
+                       width: 2px;
+                       height: 250px;
+                       background: linear-gradient(70deg, rgba(255, 255, 255, 0.00) 0%, #FFF 51.56%, rgba(255, 255, 255, 0.00) 100%);
+                       left: 0;
+                       transition: height 0.3s;
+
+                   }
+
+                   &::after {
+                       content: '';
+                       position: absolute;
+                       width: 2px;
+                       height: 250px;
+                       background: linear-gradient(70deg, rgba(255, 255, 255, 0.00) 0%, #FFF 51.56%, rgba(255, 255, 255, 0.00) 100%);
+                       right: 0;
+                       transition: height 0.3s;
+                       /* Добавляем плавный переход для высоты */
+                   }
+
+                   &:hover::before,
+                   &:hover::after {
+                       height: 880px;
+                   }
+
+                   &:hover {
+                       margin-top: 100px;
+                       gap: 65px;
+
+                       .menu__button {
+                           display: block;
+                       }
+                   }
+
+
+
+
+               }
+
+           }
+
+
+       }
+
+       .menu__blank {
+           position: relative;
+           background: #FFF;
+           margin: 0 auto;
+           margin-top: -209px;
+           z-index: 80;
+           max-width: 1564px;
+           height: 280px;
+           display: flex;
+           flex-direction: column;
+           gap: 23px;
+
+           .menu__blank--inner {
+               padding-left: 60px;
+               padding-top: 60px;
+               max-width: 1520px;
+               justify-content: space-between;
+               display: flex;
+               flex-direction: row;
+               align-items: center;
+
+               .blank__inner--text {
+                   color: #000;
+                   margin-top: -10px;
+                   width: 969px;
+                   margin-left: 0;
+                   font-family: Roboto;
+                   font-size: 24px;
+                   font-style: normal;
+                   font-weight: 300;
+                   line-height: normal;
+                   letter-spacing: 16.68px;
+                   text-transform: uppercase;
+               }
+
+               .blank__btn--svg {
+                   background: none;
+                   border: none;
+                   margin-top: -5px;
+
+               }
+
+
+           }
+
+           .blank__inner--line {
+               max-width: 1444px;
+               height: 1px;
+               margin-left: 60px;
+               margin-top: 20px;
+               background: rgba(0, 0, 0, 0.15);
+           }
+
+           .menu__blank--footer {
+               padding-left: 26px;
+               padding-top: 13px;
+               display: flex;
+               flex-direction: row;
+               align-items: center;
+
+               justify-content: space-around;
+
+               .blank__footer--item {
+                   display: flex;
+                   flex-direction: row;
+                   gap: 30px;
+
+
+                   .blank__item--desc {
+                       color: #000;
+                       font-family: Open Sans;
+                       font-size: 18px;
+                       font-style: normal;
+                       font-weight: 300;
+                       line-height: 30px;
+                       /* 166.667% */
+                   }
+               }
+           }
+       }
+
+       &.active {
+           display: block;
+       }
+   }
+
+   @media screen and (max-width: 1000px) {
+
+
+       .menu .menu__swiper {
+           display: flex;
+           margin-top: 0;
+           height: 100%;
+           width: auto;
+           flex-direction: column;
+       }
+
+       .menu .menu__blank {
+           height: auto;
+       }
+
+       .menu .menu__blank .menu__blank--footer {
+           flex-direction: column;
+           align-items: flex-start;
+       }
+
+       .menu .menu__blank .menu__blank--inner {
+           flex-direction: column;
+           align-items: flex-start;
+           gap: 20px;
+       }
+
+       .menu .menu__blank .menu__blank--inner .blank__inner--text {
+           width: 100%;
+       }
+
+       .menu .menu__swiper .menu__swiper--wrapper .menu__swiper--slide::before {
+           width: 1000px;
+           height: 2px;
+           bottom: 0;
+       }
+
+       .menu .menu__swiper .menu__swiper--wrapper .menu__swiper--slide::after {
+           width: 1000px;
+           height: 2px;
+           top: 0;
+       }
+
+       .menu .menu__blank .menu__blank--inner .blank__inner--text {
+           color: #000;
+           font-family: Roboto;
+           font-size: 14px;
+           font-style: normal;
+           font-weight: 300;
+           line-height: normal;
+           letter-spacing: 9.73px;
+           text-transform: uppercase;
+       }
+   }
