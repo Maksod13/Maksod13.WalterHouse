@@ -239,3 +239,13 @@
            text-transform: uppercase;
        }
    }
+
+   @media screen and (max-width: 500px) {
+       .menu .menu__swiper {
+           height: 576px;
+           margin-top: 100px;
+       }
+           .menu .menu__swiper .menu__swiper--wrapper .menu__swiper--slide{
+            font-size: 15px;
+           }
+   }
