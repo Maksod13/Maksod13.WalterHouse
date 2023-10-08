@@ -172,6 +172,22 @@
 
    @media screen and (max-width: 1000px) {
 
+       .menu__swiper .menu__swiper--wrapper .menu__swiper--slide:hover::after {
+           display: none;
+       }
+
+       .menu .menu__swiper .menu__swiper--wrapper .menu__swiper--slide:hover .menu__button {
+           display: none;
+       }
+
+       .menu .menu__swiper .menu__swiper--wrapper .menu__swiper--slide:hover {
+           display: none;
+       }
+
+       .menu .menu__swiper .menu__swiper--wrapper .menu__swiper--slide:hover::before,
+       .menu .menu__swiper .menu__swiper--wrapper .menu__swiper--slide:hover::after {
+           display: none;
+       }
 
        .menu .menu__swiper {
            display: flex;
