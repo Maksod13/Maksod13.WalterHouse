@@ -29,17 +29,18 @@ const swiper1 = new Swiper(".menu__swiper", {
   },
   breakpoints: {
     1000: {
-       direction: 'horizontal',
+      direction: 'horizontal', // Горизонтальное направление при разрешении больше 1000 пикселей
     },
     100: {
-     
-      direction: 'vertical',
-        navigation: {
-        nextEl: null,
-        prevEl: null,
+      direction: 'vertical', // Вертикальное направление при разрешении менее 1000 пикселей
+      navigation: {
+        nextEl: null, // Убираем кнопку "Next"
+        prevEl: null, // Убираем кнопку "Prev"
+      },
+      pagination: {
+        el: null, // Убираем пагинацию
       }
     }
-
   }
 });
 
